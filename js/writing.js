@@ -99,7 +99,7 @@
   }
 
   // ---------- article: accessible lightbox for photographs ----------
-  var links = Array.prototype.slice.call(document.querySelectorAll('.prose a[data-lightbox]'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('a[data-lightbox]'));
   if (links.length && typeof HTMLDialogElement === 'function') setupLightbox(links);
 
   function setupLightbox(links) {
@@ -132,8 +132,10 @@
     }
 
     function open(i, from) {
+      // Step through the photos in the same gallery (or the same article body).
       // Re-read the list in case a broken image removed itself from the set.
-      active = links.filter(function (l) { return l.hasAttribute('data-lightbox'); });
+      var group = from.closest('[data-gallery], .prose');
+      active = links.filter(function (l) { return l.hasAttribute('data-lightbox') && l.closest('[data-gallery], .prose') === group; });
       opener = from;
       dlg.toggleAttribute('data-single', active.length < 2);
       show(active.indexOf(from) === -1 ? i : active.indexOf(from));

@@ -316,6 +316,23 @@ ${article.draft ? '<meta name="robots" content="noindex">\n' : ''}<script type="
   });
 }
 
+// ---------- homepage "Recent writing" strip (injected into index.html) ----------
+export function homeRecent(site, articles) {
+  SITE = site;
+  if (!articles.length) return '';
+  return `<section class="related home-recent" aria-labelledby="recent-title">
+  <div class="wrap">
+    <div class="home-recent-head">
+      <h2 class="fn-label" id="recent-title">Recent writing</h2>
+      <a class="read-link" href="writing/">All of ${t(site.publication.title)} <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="fn-grid fn-grid--related">
+    ${articles.slice(0, 3).map((x) => card(x, '', { variant: x.cover ? 'standard' : 'text' })).join('\n    ')}
+    </div>
+  </div>
+</section>`;
+}
+
 // ---------- 404 ----------
 export function notFoundPage(site) {
   SITE = site;

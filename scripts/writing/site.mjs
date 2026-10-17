@@ -159,7 +159,7 @@ export function loadSite({ root, includeDrafts = false }) {
     shareImage: resolveImage(config.defaultShareImage, '', 'config.json (defaultShareImage)'),
     year: Math.max(2026, ...articles.map((x) => x.date.getUTCFullYear())),
   };
-  return { site, articles, warnings: [...new Set(warnings)], errors };
+  return { root, site, articles, warnings: [...new Set(warnings)], errors };
 }
 
 export function relatedTo(article, articles, n = 3) {
@@ -174,7 +174,9 @@ export function relatedTo(article, articles, n = 3) {
     .map((p) => p.x);
 }
 
-export function buildFiles({ site, articles }) {
+const RECENT = /(<!-- recent-writing:start -->)[\s\S]*?(<!-- recent-writing:end -->)/;
+
+export function buildFiles({ root, site, articles }) {
   // `articles` only contains drafts in the local preview, where they're shown with a Draft flag.
   const files = new Map();
   const published = articles.filter((x) => !x.draft);
@@ -184,6 +186,9 @@ export function buildFiles({ site, articles }) {
     files.set(`writing/${article.slug}/index.html`, tpl.articlePage(site, article, relatedTo(article, articles)));
   }
   files.set('writing/feed.xml', tpl.feed(site, published));
+  // The homepage is hand-written; only the block between its recent-writing markers is generated.
+  const home = root && existsSync(join(root, 'index.html')) ? readFileSync(join(root, 'index.html'), 'utf8') : '';
+  if (RECENT.test(home)) files.set('index.html', home.replace(RECENT, (_, start, end) => `${start}\n${tpl.homeRecent(site, published)}\n${end}`));
   files.set('sitemap.xml', tpl.sitemap(site, published));
   files.set('robots.txt', tpl.robots(site));
   files.set('404.html', tpl.notFoundPage(site));

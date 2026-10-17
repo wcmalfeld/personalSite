@@ -4,28 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Will Malfeld — Software Engineer &amp; Educator</title>
-<meta name="description" content="Will Malfeld — software engineer, educator, and mountain bike coach. Portfolio, experience, and writing.">
+<meta name="description" content="Will Malfeld — software engineer, educator, and mountain bike coach. Portfolio, experience, photographs, and writing.">
+<link rel="canonical" href="https://www.willmalfeld.com/">
+<meta property="og:site_name" content="Will Malfeld">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Will Malfeld — Software Engineer &amp; Educator">
+<meta property="og:description" content="Software engineer, educator, and mountain bike coach. Portfolio, experience, photographs, and writing.">
+<meta property="og:url" content="https://www.willmalfeld.com/">
+<meta property="og:image" content="https://www.willmalfeld.com/assets/will.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Field Notes — Will Malfeld" href="writing/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="canonical" href="https://www.willmalfeld.com/">
-<link rel="alternate" type="application/rss+xml" title="Field Notes — Will Malfeld" href="writing/feed.xml">
+<link rel="stylesheet" href="css/writing.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="fn fn-home">
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Main">
   <div class="wrap">
-    <a href="index.html" class="brand">Will<span>.</span>Malfeld</a>
+    <a href="./" class="brand">Will<span>.</span>Malfeld</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="./" class="active" aria-current="page">About</a></li>
       <li><a href="writing/">Writing</a></li>
       <li><a href="mailto:wcmalfeld@gmail.com">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="hero">
+<main id="main">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="home-hero">
   <svg class="contour-field" viewBox="0 0 1100 420" preserveAspectRatio="none" aria-hidden="true">
     <path d="M-20,60 C 180,20 320,100 500,60 C 680,20 820,90 1120,50" fill="none" stroke="#1F2B24" stroke-opacity="0.10" stroke-width="1"/>
     <path d="M-20,120 C 200,80 300,160 520,120 C 700,85 860,150 1120,110" fill="none" stroke="#1F2B24" stroke-opacity="0.08" stroke-width="1"/>
@@ -33,110 +48,246 @@
     <path d="M-20,260 C 240,225 360,290 560,250 C 740,215 900,275 1120,240" fill="none" stroke="#1F2B24" stroke-opacity="0.08" stroke-width="1"/>
     <path d="M-20,330 C 260,300 380,360 580,325 C 760,295 920,345 1120,310" fill="none" stroke="#1F2B24" stroke-opacity="0.06" stroke-width="1"/>
   </svg>
-
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <h1 class="hero-name">Will<br>Malfeld</h1>
-        <p class="hero-role">Software Engineer <span class="dot">&middot;</span> Educator <span class="dot">&middot;</span> Mountain Bike Coach</p>
-        <div class="hero-contact">
-          <a href="mailto:wcmalfeld@gmail.com">wcmalfeld@gmail.com</a>
-          <a href="tel:7192055531">719&#8209;205&#8209;5531</a>
-          <a href="https://www.linkedin.com/in/will-malfeld-683378200/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+  <div class="wrap home-hero-grid">
+    <div class="home-hero-text">
+      <p class="eyebrow">Software Engineer &middot; Educator &middot; Mountain Bike Coach</p>
+      <h1 class="home-name">Will<br>Malfeld</h1>
+      <p class="home-lede">I&rsquo;m a computer scientist, teacher, mountain biker, and builder who likes figuring out how things work, and then finding a better way to make them work.</p>
+      <div class="hero-contact">
+        <a href="mailto:wcmalfeld@gmail.com">wcmalfeld@gmail.com</a>
+        <a href="tel:7192055531">719&#8209;205&#8209;5531</a>
+        <a href="https://www.linkedin.com/in/will-malfeld-683378200/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="writing/">Writing</a>
       </div>
-      <img class="portrait" src="assets/will.jpg" alt="Will Malfeld" style="object-fit:cover; object-position: 68% 32%;">
     </div>
+    <figure class="home-portrait">
+      <img src="assets/will.jpg" alt="Will Malfeld" width="611" height="1285" fetchpriority="high" style="object-position: 68% 32%;">
+    </figure>
   </div>
 </header>
 
-<section class="reveal">
-  <div class="wrap">
-    <div class="bio-copy">
-      <p>I&rsquo;m a computer scientist, teacher, mountain biker, and builder who likes figuring out how things work, and then finding a better way to make them work.</p>
+<!-- Wide photograph band. Replace the src (and caption) with your own photo. -->
+<figure class="home-band">
+  <a class="fig-frame" href="assets/home/band.svg" data-lightbox data-caption="Placeholder — replace with a wide photograph.">
+    <img src="assets/home/band.svg" alt="Placeholder for a wide landscape photograph" loading="lazy" decoding="async">
+  </a>
+  <figcaption class="wrap"><span class="cap">Placeholder &mdash; a wide photograph goes here.</span> <span class="credit">assets/home/band.jpg</span></figcaption>
+</figure>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="home-section" aria-labelledby="about-title">
+  <div class="wrap home-split">
+    <h2 class="fn-label home-split-label" id="about-title">About</h2>
+    <div class="home-prose">
       <p>My background spans software engineering, systems thinking, mathematics and physics educating, and high-level mountain biking coaching. I&rsquo;ve taught and mentored students while traveling the world, built software and AI systems, and spent more time than I can count on the bike.</p>
-      <p>For the past two years I ran an unconventional classrooms out of eight different countries, teaching mathematics and physics by day and coaching downhill mountain biking by afternoon, work I kept up through a stretch of cancer treatment that taught me a lot about staying calm, solving the problem in front of me, and taking care of the people around me.</p>
-    </div>
-
-    <div class="lede-quote">
-      <blockquote>I care most about making complicated things simple, useful, and human.</blockquote>
-      <cite>&mdash; Will Malfeld</cite>
+      <p>For the past two years I ran an unconventional classroom out of eight different countries, teaching mathematics and physics by day and coaching downhill mountain biking by afternoon, work I kept up through a stretch of cancer treatment that taught me a lot about staying calm, solving the problem in front of me, and taking care of the people around me.</p>
+      <aside class="pullquote home-quote">
+        <blockquote><p>I care most about making complicated things simple, useful, and human.</p></blockquote>
+        <p class="pullquote-cite">Will Malfeld</p>
+      </aside>
     </div>
   </div>
 </section>
 
-<hr class="hairline">
-
-<section class="reveal">
+<!-- ============================================================
+     PORTFOLIO — one <article class="project"> per project.
+     Photos: assets/home/projects/. The first image is the main
+     one; up to two more make a small collage. Delete any you
+     don't need.
+     ============================================================ -->
+<section class="home-section home-projects" aria-labelledby="projects-title">
   <div class="wrap">
-    <p class="eyebrow">Recent Experience</p>
-    <div class="simple-list">
-
-      <div class="simple-item">
-        <span class="simple-role">Physics &amp; Mathematics Instructor</span>
-        <span class="simple-dates">Mar. 2024 &ndash; Jun. 2026</span>
-        <span class="simple-sub"><span class="blaze">World Class Academy</span> &middot; Mountain Bike Coach &amp; Mentor</span>
-      </div>
-
-      <div class="simple-item">
-        <span class="simple-role">Associate SFCC Software Developer</span>
-        <span class="simple-dates">Mar. 2021 &ndash; Oct. 2023</span>
-        <span class="simple-sub"><span class="blaze">Red Van Workshop</span> &middot; Intern &rarr; Associate</span>
-      </div>
-
-      <div class="simple-item">
-        <span class="simple-role">Software Engineer Intern</span>
-        <span class="simple-dates">Fall 2021</span>
-        <span class="simple-sub"><span class="blaze">Meadowlark Optics</span></span>
-      </div>
-
+    <div class="home-head">
+      <p class="eyebrow">Portfolio</p>
+      <h2 class="fn-label home-head-title" id="projects-title">Currently Building</h2>
     </div>
+
+    <article class="project">
+      <div class="project-media project-media--n3" data-gallery>
+        <a class="fig-frame" href="assets/home/projects/mathlete-mtb.svg" data-lightbox data-caption="Mathlete MTB"><img src="assets/home/projects/mathlete-mtb.svg" alt="Placeholder for a Mathlete MTB photograph" loading="lazy" decoding="async"></a>
+        <a class="fig-frame" href="assets/home/projects/mathlete-mtb-2.svg" data-lightbox data-caption="Mathlete MTB"><img src="assets/home/projects/mathlete-mtb-2.svg" alt="Placeholder for a second Mathlete MTB photograph" loading="lazy" decoding="async"></a>
+        <a class="fig-frame" href="assets/home/projects/mathlete-mtb-3.svg" data-lightbox data-caption="Mathlete MTB"><img src="assets/home/projects/mathlete-mtb-3.svg" alt="Placeholder for a third Mathlete MTB photograph" loading="lazy" decoding="async"></a>
+      </div>
+      <div class="project-text">
+        <p class="kicker"><span class="project-num">01</span>Education</p>
+        <h3 class="project-title">Mathlete MTB</h3>
+        <p class="project-desc">A private math tutoring brand for high-school students, combining mathematics, mentorship, and mountain biking to build academic confidence through interests kids already care about.</p>
+        <a class="read-link" href="https://www.mathletemtb.com" target="_blank" rel="noopener">mathletemtb.com <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-media project-media--n3" data-gallery>
+        <a class="fig-frame" href="assets/home/projects/willbuilds-ai.svg" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai.svg" alt="Placeholder for a willbuilds.ai screenshot or photograph" loading="lazy" decoding="async"></a>
+        <a class="fig-frame" href="assets/home/projects/willbuilds-ai-2.svg" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai-2.svg" alt="Placeholder for a second willbuilds.ai image" loading="lazy" decoding="async"></a>
+        <a class="fig-frame" href="assets/home/projects/willbuilds-ai-3.svg" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai-3.svg" alt="Placeholder for a third willbuilds.ai image" loading="lazy" decoding="async"></a>
+      </div>
+      <div class="project-text">
+        <p class="kicker"><span class="project-num">02</span>AI / Automation</p>
+        <h3 class="project-title">willbuilds.ai</h3>
+        <p class="project-desc">Practical AI and automation tools built around real-world workflows, custom learning agents and mentoring tools that improve individualized student learning.</p>
+        <a class="read-link" href="https://www.willbuilds.ai" target="_blank" rel="noopener">willbuilds.ai <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-media" data-gallery>
+        <a class="fig-frame" href="assets/home/projects/mtb-media.svg" data-lightbox data-caption="MTB Media"><img src="assets/home/projects/mtb-media.svg" alt="Placeholder for a film still from MTB Media" loading="lazy" decoding="async"></a>
+      </div>
+      <div class="project-text">
+        <p class="kicker"><span class="project-num">03</span>Film</p>
+        <h3 class="project-title">MTB Media</h3>
+        <p class="project-desc">Independent filming for professional athletes and small businesses, focused on authentic storytelling and mountain bike culture.</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<hr class="hairline">
-
-<section class="reveal">
+<!-- ============================================================
+     FIELD ALBUM — photographs from past work and adventures.
+     Photos: assets/home/album/. Each <figure> is one tile; the
+     first is large, the last spans the full width. Add, remove,
+     or reorder tiles freely; captions are optional.
+     ============================================================ -->
+<section class="home-section home-album-section" aria-labelledby="album-title">
   <div class="wrap">
-    <p class="eyebrow">Education</p>
-    <div class="simple-list">
-      <div class="simple-item">
-        <span class="simple-role">B.A. Computer Science</span>
-        <span class="simple-dates">May 2023</span>
-        <span class="simple-sub"><span class="blaze">University of Colorado Boulder</span></span>
-      </div>
+    <div class="home-head">
+      <p class="eyebrow">Photographs</p>
+      <h2 class="fn-label home-head-title" id="album-title">Field Album</h2>
+      <p class="home-head-note">Classrooms in eight countries, afternoons on the bike, and the projects in between.</p>
+    </div>
+
+    <div class="album" data-gallery>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/01.svg" data-lightbox data-caption="Teaching — add a caption"><img src="assets/home/album/01.svg" alt="Placeholder for a teaching photograph" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">Teaching</span> Add a caption</figcaption>
+      </figure>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/02.svg" data-lightbox data-caption="Coaching — add a caption"><img src="assets/home/album/02.svg" alt="Placeholder for a coaching photograph" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">Coaching</span> Add a caption</figcaption>
+      </figure>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/03.svg" data-lightbox data-caption="Travel — add a caption"><img src="assets/home/album/03.svg" alt="Placeholder for a travel photograph" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">Travel</span> Add a caption</figcaption>
+      </figure>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/04.svg" data-lightbox data-caption="On the bike — add a caption"><img src="assets/home/album/04.svg" alt="Placeholder for a mountain biking photograph" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">On the bike</span> Add a caption</figcaption>
+      </figure>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/05.svg" data-lightbox data-caption="Building — add a caption"><img src="assets/home/album/05.svg" alt="Placeholder for a photograph of a project" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">Building</span> Add a caption</figcaption>
+      </figure>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/06.svg" data-lightbox data-caption="Film — add a caption"><img src="assets/home/album/06.svg" alt="Placeholder for a filming photograph" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">Film</span> Add a caption</figcaption>
+      </figure>
+      <figure class="album-tile">
+        <a class="fig-frame" href="assets/home/album/07.svg" data-lightbox data-caption="Add a caption"><img src="assets/home/album/07.svg" alt="Placeholder for a wide landscape photograph" loading="lazy" decoding="async"></a>
+        <figcaption><span class="kicker">Places</span> Add a caption</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<hr class="hairline">
+<!-- ============================================================
+     EXPERIENCE & EDUCATION
+     Photos: assets/home/experience/. Delete a <figure> to show
+     an entry without a photo.
+     ============================================================ -->
+<section class="home-section" aria-labelledby="experience-title">
+  <div class="wrap home-split">
+    <h2 class="fn-label home-split-label" id="experience-title">Experience</h2>
+    <ol class="exp-list">
+      <li class="exp">
+        <figure class="exp-photo"><img src="assets/home/experience/world-class-academy.svg" alt="Placeholder for a World Class Academy photograph" loading="lazy" decoding="async"></figure>
+        <div class="exp-body">
+          <p class="meta">Mar. 2024 &ndash; Jun. 2026</p>
+          <h3 class="exp-role">Physics &amp; Mathematics Instructor</h3>
+          <p class="exp-org"><span class="exp-co">World Class Academy</span> &middot; Mountain Bike Coach &amp; Mentor</p>
+        </div>
+      </li>
+      <li class="exp">
+        <figure class="exp-photo"><img src="assets/home/experience/red-van-workshop.svg" alt="Placeholder for a Red Van Workshop photograph" loading="lazy" decoding="async"></figure>
+        <div class="exp-body">
+          <p class="meta">Mar. 2021 &ndash; Oct. 2023</p>
+          <h3 class="exp-role">Associate SFCC Software Developer</h3>
+          <p class="exp-org"><span class="exp-co">Red Van Workshop</span> &middot; Intern &rarr; Associate</p>
+        </div>
+      </li>
+      <li class="exp">
+        <figure class="exp-photo"><img src="assets/home/experience/meadowlark-optics.svg" alt="Placeholder for a Meadowlark Optics photograph" loading="lazy" decoding="async"></figure>
+        <div class="exp-body">
+          <p class="meta">Fall 2021</p>
+          <h3 class="exp-role">Software Engineer Intern</h3>
+          <p class="exp-org"><span class="exp-co">Meadowlark Optics</span></p>
+        </div>
+      </li>
+    </ol>
+  </div>
 
-<section class="reveal">
-  
+  <div class="wrap home-split home-split--tight">
+    <h2 class="fn-label home-split-label" id="education-title">Education</h2>
+    <ol class="exp-list">
+      <li class="exp exp--plain">
+        <div class="exp-body">
+          <p class="meta">May 2023</p>
+          <h3 class="exp-role">B.A. Computer Science</h3>
+          <p class="exp-org"><span class="exp-co">University of Colorado Boulder</span></p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     RECENT WRITING — filled in automatically by
+     `npm run build` from content/writing/. Don't edit between
+     the markers; anything there is replaced on each build.
+     ============================================================ -->
+<!-- recent-writing:start -->
+<section class="related home-recent" aria-labelledby="recent-title">
   <div class="wrap">
-    <p class="eyebrow">Currently Building</p>
-    <div class="simple-list">
-            <div class="simple-item">
-        <span class="simple-role">Mathlete MTB</span>
-        <span class="simple-dates">Education</span>
-        <a href="http://www.mathletemtb.com">www.mathletemtb.com</a>
-        <p class="simple-desc">A private math tutoring brand for high-school students, combining mathematics, mentorship, and mountain biking to build academic confidence through interests kids already care about.</p>
+    <div class="home-recent-head">
+      <h2 class="fn-label" id="recent-title">Recent writing</h2>
+      <a class="read-link" href="writing/">All of Field Notes <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="fn-grid fn-grid--related">
+    <article class="card card--standard" data-topic="building-and-technology" data-search="what mountains taught me about debugging example essay — replace with your own writing reading terrain and reading a stack trace turn out to require the same kind of patience. building &amp; technology software mountain biking problem solving">
+      <div class="card-media"><img src="assets/writing/what-mountains-taught-me-about-debugging/cover.svg" alt="Placeholder image with topographic contour lines" width="1800" height="1200" loading="lazy" decoding="async"></div>
+      <div class="card-text">
+        <p class="kicker">Building &amp; Technology</p>
+        <h3 class="card-title"><a class="card-link" href="writing/what-mountains-taught-me-about-debugging/">What Mountains Taught Me About Debugging</a></h3>
+        <p class="card-excerpt">Reading terrain and reading a stack trace turn out to require the same kind of patience.</p>
+        <p class="meta"><time datetime="2026-10-14">Oct 14, 2026</time><span class="sep" aria-hidden="true">&middot;</span>1 min read</p>
       </div>
-      <div class="simple-item">
-        <span class="simple-role">willbuilds.ai</span>
-        <span class="simple-dates">AI / Automation</span>
-        <a href="http://www.willbuilds.ai">www.willbuilds.ai</a>
-        <p class="simple-desc">Practical AI and automation tools built around real-world workflows, custom learning agents and mentoring tools that improve individualized student learning.</p>
+    </article>
+    <article class="card card--standard" data-topic="teaching-and-learning" data-search="teaching calculus on the road example essay — replace with your own writing notes on running a classroom out of a van, across eight countries, with twenty-three students. teaching &amp; learning teaching mathematics travel">
+      <div class="card-media"><img src="assets/writing/teaching-calculus-on-the-road/cover.svg" alt="Placeholder portrait image with blue contour lines" width="1200" height="1500" loading="lazy" decoding="async"></div>
+      <div class="card-text">
+        <p class="kicker">Teaching &amp; Learning</p>
+        <h3 class="card-title"><a class="card-link" href="writing/teaching-calculus-on-the-road/">Teaching Calculus on the Road</a></h3>
+        <p class="card-excerpt">Notes on running a classroom out of a van, across eight countries, with twenty-three students.</p>
+        <p class="meta"><time datetime="2026-09-28">Sep 28, 2026</time><span class="sep" aria-hidden="true">&middot;</span>1 min read</p>
       </div>
-
-      <div class="simple-item">
-        <span class="simple-role">MTB Media</span>
-        <span class="simple-dates">Film</span>
-        <p class="simple-desc">Independent filming for professional athletes and small businesses, focused on authentic storytelling and mountain bike culture.</p>
+    </article>
+    <article class="card card--standard" data-topic="field-notes" data-search="how this notebook works a demonstration of every layout this publication supports — photographs, galleries, pull quotes, and more. a working reference for the writing section — every kind of photograph, gallery, and text block an essay can use. replace or unpublish it once real writing is in place. field notes example photography formatting">
+      <div class="card-media"><img src="assets/writing/how-this-notebook-works/cover.svg" alt="Placeholder landscape image in gold contour lines" width="2400" height="1350" loading="lazy" decoding="async"></div>
+      <div class="card-text">
+        <p class="kicker">Field Notes</p>
+        <h3 class="card-title"><a class="card-link" href="writing/how-this-notebook-works/">How This Notebook Works</a></h3>
+        <p class="card-excerpt">A working reference for the writing section — every kind of photograph, gallery, and text block an essay can use. Replace or unpublish it once real writing is in place.</p>
+        <p class="meta"><time datetime="2026-09-10">Sep 10, 2026</time><span class="sep" aria-hidden="true">&middot;</span>2 min read</p>
       </div>
+    </article>
     </div>
   </div>
 </section>
+<!-- recent-writing:end -->
+
+</main>
 
 <footer class="footer-simple">
   <div class="wrap">
@@ -145,11 +296,12 @@
       <a href="tel:7192055531">719-205-5531</a>
       <a href="https://www.linkedin.com/in/will-malfeld-683378200/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="writing/">Writing</a>
+      <a href="writing/feed.xml">RSS</a>
     </div>
     <div class="f-bottom">&copy; 2026 Will Malfeld &middot; Boulder, Colorado</div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/writing.js" defer></script>
 </body>
 </html>

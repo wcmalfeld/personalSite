@@ -40,7 +40,7 @@ function build() {
     mkdirSync(dirname(out), { recursive: true });
     writeFileSync(out, contents);
   }
-  console.log(`Built ${articles.length} published piece(s) → writing/ (+ sitemap.xml, robots.txt, 404.html, feed.xml, ${files.size - articles.length - 5} redirect(s))`);
+  console.log(`Built ${articles.length} published piece(s) → writing/ (+ sitemap.xml, robots.txt, 404.html, feed.xml, ${[...files.keys()].filter((p) => files.get(p).includes('http-equiv="refresh"')).length} redirect(s))`);
 }
 
 // ---------- link checking ----------
@@ -48,7 +48,7 @@ function checkLinks(files) {
   const exists = (p) => files.has(p) || (existsSync(join(ROOT, p)) && statSync(join(ROOT, p)).isFile());
   const broken = [];
   const pages = [...files.keys()].filter((p) => p.endsWith('.html'));
-  pages.push('index.html');
+  if (!files.has('index.html')) pages.push('index.html');
   for (const page of pages) {
     const html = files.get(page) ?? readFileSync(join(ROOT, page), 'utf8');
     if (/http-equiv="refresh"/.test(html)) continue;
