@@ -1,0 +1,17 @@
+# Checks that the generated writing pages are up to date and have no broken links.
+# It doesn't deploy anything: GitHub Pages keeps serving the repository as before.
+name: Writing check
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --test tests/
+      - run: node scripts/writing/build.mjs check

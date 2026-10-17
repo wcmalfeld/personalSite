@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+# Private work in progress: shows in the local preview, never committed or published.
+content/drafts/

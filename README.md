@@ -1,15 +1,33 @@
 # willmalfeld.com — site guide
 
-A static site, no build step required. Open `index.html` in a browser to preview it locally, or upload the whole folder to any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages all work for free).
+A static site hosted on GitHub Pages. The homepage is hand-written HTML. The writing section (`/writing/`) is generated from Markdown by a small, dependency-free Node script, and the generated pages are committed, so hosting needs no build step.
 
 ## Files
 
 ```
-index.html      About / resume (home page)
-blog.html       Blog listing page
-blog/           One HTML file per post
-css/style.css   All styling
-js/main.js      Scroll-reveal animation
+index.html          About / resume (home page): edit directly
+content/writing/    Essays as Markdown + config.json. See content/writing/README.md
+assets/writing/     Photos for each essay, one folder per essay
+writing/            GENERATED essay pages, RSS feed: don't edit
+sitemap.xml, robots.txt, 404.html, blog.html, blog/   GENERATED (blog URLs redirect to /writing/)
+scripts/writing/    The build script
+css/style.css       Site-wide styling + design tokens
+css/writing.css     Writing-section styling
+js/main.js          Homepage scroll-reveal
+js/writing.js       Writing filters, search, photo viewer
+tests/              `npm test`
+```
+
+## Writing
+
+The full guide is in **[content/writing/README.md](content/writing/README.md)**. Short version:
+
+```sh
+nvm use 20          # Node 18+ needed
+npm run dev         # preview at http://localhost:4000/writing/
+npm run build       # regenerate pages after editing content
+npm run check       # verify build is current + no broken links
+npm test
 ```
 
 ## Add your photo
@@ -27,22 +45,6 @@ Currently the hero uses a circular "WM" placeholder (`.portrait` in `index.html`
    ```
 3. If the photo isn't square, add `style="object-fit:cover;"` to the `<img>` tag so it fills the circle cleanly.
 
-## Add a new blog post
-
-1. Duplicate `blog/what-mountains-taught-me-about-debugging.html` and rename it, e.g. `blog/my-new-post.html`.
-2. Open the new file and update:
-   - `<title>` and the `meta description`
-   - the `eyebrow` category label (e.g. "Software", "Teaching", "Cycling")
-   - the `<h1>` and `post-meta` line (put a real date here instead of "Example post")
-   - the content inside `.post-content` — delete the italic placeholder note first
-3. Open `blog.html` and duplicate one `<a class="post-card">...</a>` block, then update:
-   - the `href` to point at your new file
-   - the category, title, excerpt, and date text
-   - the little SVG polyline colors if you want the thumbnail to look different (swap `stroke="#C1502E"` for `#3E6E8E` or `#B08D4F` to vary it)
-4. Save, refresh `blog.html` in your browser — the new card should appear.
-
-There's no database — the blog is just a list of static HTML files, which keeps it fast and easy to host anywhere.
-
 ## Edit your info
 
 Everything in `index.html` (bio, experience, projects, education, skills, contact) is plain HTML — search for the text you want to change and edit it directly. Section order can be rearranged by moving the whole `<section>...</section>` blocks.
@@ -55,3 +57,5 @@ All design tokens live at the top of `css/style.css` under `:root`. Change a hex
 - `--chalk` — the blue accent (teaching)
 - `--contour` — the gold accent (elevation lines)
 - `--ink` / `--mist` — text and background
+
+The writing section adds a warmer paper background and the Newsreader serif for long-form reading. Those live in `css/writing.css` under `body.fn`.

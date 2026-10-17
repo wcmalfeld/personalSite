@@ -1,0 +1,13 @@
+{
+  "name": "willmalfeld-site",
+  "private": true,
+  "description": "willmalfeld.com — static site with a Markdown-powered writing section",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/writing/build.mjs build",
+    "dev": "node scripts/writing/build.mjs serve",
+    "check": "node scripts/writing/build.mjs check",
+    "test": "node --test tests/"
+  }
+}

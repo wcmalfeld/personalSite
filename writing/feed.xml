@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Field Notes — Will Malfeld</title>
+  <link>https://www.willmalfeld.com/writing/</link>
+  <description>Essays, stories, and field notes by Will Malfeld on life, learning, technology, AI, teaching, and mountain biking.</description>
+  <language>en-us</language>
+  <atom:link href="https://www.willmalfeld.com/writing/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Wed, 14 Oct 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>What Mountains Taught Me About Debugging</title>
+    <link>https://www.willmalfeld.com/writing/what-mountains-taught-me-about-debugging/</link>
+    <guid isPermaLink="true">https://www.willmalfeld.com/writing/what-mountains-taught-me-about-debugging/</guid>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+    <category>Building &amp; Technology</category>
+    <description>Reading terrain and reading a stack trace turn out to require the same kind of patience.</description>
+  </item>
+  <item>
+    <title>Teaching Calculus on the Road</title>
+    <link>https://www.willmalfeld.com/writing/teaching-calculus-on-the-road/</link>
+    <guid isPermaLink="true">https://www.willmalfeld.com/writing/teaching-calculus-on-the-road/</guid>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Teaching &amp; Learning</category>
+    <description>Notes on running a classroom out of a van, across eight countries, with twenty-three students.</description>
+  </item>
+  <item>
+    <title>How This Notebook Works</title>
+    <link>https://www.willmalfeld.com/writing/how-this-notebook-works/</link>
+    <guid isPermaLink="true">https://www.willmalfeld.com/writing/how-this-notebook-works/</guid>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Field Notes</category>
+    <description>A working reference for the writing section — every kind of photograph, gallery, and text block an essay can use. Replace or unpublish it once real writing is in place.</description>
+  </item>
+  <item>
+    <title>Untitled Ride Report</title>
+    <link>https://www.willmalfeld.com/writing/untitled-ride-report/</link>
+    <guid isPermaLink="true">https://www.willmalfeld.com/writing/untitled-ride-report/</guid>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Mountain Biking &amp; Adventure</category>
+    <description>Placeholder for a short piece without photographs. Pieces with no cover image get a typographic card instead.</description>
+  </item>
+</channel>
+</rss>

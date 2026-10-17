@@ -1,0 +1,36 @@
+{
+  "siteUrl": "https://www.willmalfeld.com",
+  "author": "Will Malfeld",
+  "authorRole": "Software Engineer · Educator · Mountain Bike Coach",
+  "authorImage": "assets/will.jpg",
+  "defaultShareImage": "assets/will.jpg",
+
+  "publication": {
+    "eyebrow": "Writing",
+    "title": "Field Notes",
+    "intro": "Essays, stories, and observations about life, learning, technology, teaching, and time on the bike — and the experiences that shape how I see the world.",
+    "description": "Essays, stories, and field notes by Will Malfeld on life, learning, technology, AI, teaching, and mountain biking."
+  },
+
+  "contact": {
+    "email": "wcmalfeld@gmail.com",
+    "phone": "719-205-5531",
+    "linkedin": "https://www.linkedin.com/in/will-malfeld-683378200/",
+    "location": "Boulder, Colorado"
+  },
+
+  "categories": [
+    { "name": "Life & Perspective" },
+    { "name": "Building & Technology" },
+    { "name": "AI & the Future" },
+    { "name": "Teaching & Learning" },
+    { "name": "Mountain Biking & Adventure" },
+    { "name": "People & Relationships" },
+    { "name": "Lessons Learned" },
+    { "name": "Field Notes" }
+  ],
+
+  "redirects": {
+    "blog.html": "writing/"
+  }
+}
