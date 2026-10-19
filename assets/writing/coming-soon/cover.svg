@@ -16,6 +16,6 @@
 <polyline points="-20,1136 55,1142 130,1150 205,1159 280,1168 355,1177 430,1186 505,1196 580,1205 655,1214 730,1224 805,1233 880,1242 955,1250 1030,1258 1105,1265 1180,1270 1255,1273 1330,1274 1405,1273 1480,1268 1555,1260 1630,1248 1705,1234 1780,1217" fill="none" stroke="#1F2B24" stroke-opacity="0.2" stroke-width="2.5714285714285716"/>
 <g font-family="ui-monospace, Menlo, monospace" fill="#1F2B24" text-anchor="middle">
 <text x="900" y="578" font-size="63.24999999999999" letter-spacing="11">PLACEHOLDER · 3:2</text>
-<text x="900" y="660.5" font-size="38.5" opacity="0.75">replace assets/writing/what-mountains-taught-me-about-debugging/cover.svg</text>
+<text x="900" y="660.5" font-size="38.5" opacity="0.75">replace assets/writing/coming-soon/cover.jpg</text>
 </g>
 </svg>

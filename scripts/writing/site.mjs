@@ -143,6 +143,7 @@ export function loadSite({ root, includeDrafts = false }) {
       cardImages,
       card: variant,
       shareImage: d.shareImage ? resolveImage(String(d.shareImage), slug, `${rel} (shareImage)`) : null,
+      readLabel: String(d.readLabel || 'Read the essay'),
       seoTitle: String(d.seoTitle || d.title),
       seoDescription: String(d.seoDescription || excerpt),
       aliases: list(d.aliases),

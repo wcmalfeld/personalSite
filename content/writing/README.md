@@ -44,6 +44,7 @@ git add -A && git commit -m "New essay: …" && git push    # GitHub Pages publi
    | `coverCaption`, `coverCredit` | | shown under the cover on the article page |
    | `coverPosition` | | crop focus on cards, e.g. `50% 30%` (x y) |
    | `featured` | | `true` puts it in the big slot at the top (newest featured piece wins) |
+   | `readLabel` | | link text on the featured slot (default "Read the essay") |
    | `card` | | `standard`, `wide`, `tall`, `photo` (full-width photograph), or `text`. Picked automatically if omitted. |
    | `cardImages` | | `[photo-02.jpg, photo-03.jpg]`: extra photos for a collage on `wide`/`photo` cards |
    | `updated` | | date of a meaningful revision |

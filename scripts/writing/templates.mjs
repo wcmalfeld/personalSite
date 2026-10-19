@@ -160,7 +160,7 @@ export function landingPage(site, articles) {
         ${featured.subtitle ? `<p class="feature-sub">${t(featured.subtitle)}</p>` : ''}
         <p class="feature-excerpt">${t(featured.excerpt)}</p>
         <p class="meta">${meta(featured, { long: true })}</p>
-        <a class="read-link" href="${featured.slug}/">Read the essay <span aria-hidden="true">&rarr;</span><span class="visually-hidden">: ${t(featured.title)}</span></a>
+        <a class="read-link" href="${featured.slug}/">${t(featured.readLabel)} <span aria-hidden="true">&rarr;</span><span class="visually-hidden">: ${t(featured.title)}</span></a>
       </div>
     </article>
   </div>
