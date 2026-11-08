@@ -73,7 +73,14 @@
 
 /* ---------- wide photograph band ---------- */
 .home-band { margin: 0; }
-.home-band .fig-frame { aspect-ratio: 21 / 9; max-height: 78vh; width: 100%; }
+.band-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+.home-band .fig-frame { aspect-ratio: 4 / 5; }
 .home-band figcaption {
   margin-top: 12px;
   font-family: var(--f-body);
@@ -87,7 +94,7 @@
   text-transform: uppercase;
   opacity: 0.85;
 }
-@media (max-width: 640px) { .home-band .fig-frame { aspect-ratio: 4 / 3; } }
+@media (max-width: 640px) { .band-row { gap: 3px; } }
 
 /* ---------- sections ---------- */
 .home-section { padding: 104px 0; }
@@ -293,3 +300,31 @@
 }
 .home-recent .fn-label { padding: 0; margin: 0; border: 0; font-size: clamp(32px, 4vw, 48px); }
 .home-recent .read-link { margin-top: 0; }
+
+/* ---------- willbuilds.ai ---------- */
+.project-links { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0; }
+.home-wb { background: var(--fn-panel); }
+.wb-grid { row-gap: 56px; }
+.wb-shot {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--fn-rule);
+  background: var(--paper);
+}
+.wb-shot img { object-position: top center; }
+.wb-card .card-excerpt { margin-bottom: 12px; }
+.wb-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.wb-dot { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid currentColor; }
+.wb-status--live { color: #3D6B3A; }
+.wb-status--live .wb-dot { background: currentColor; }
+.wb-status--dev { color: #8A6A2E; }
+.wb-more { margin: 56px 0 0; }

@@ -66,12 +66,15 @@
   </div>
 </header>
 
-<!-- Wide photograph band. Replace the src (and caption) with your own photo. -->
+<!-- Photo band: three vertical photos side by side. Replace each src/href
+     (and alt text) with your own photo; any shape works, frames crop to 4:5. -->
 <figure class="home-band">
-  <a class="fig-frame" href="assets/home/band.svg" data-lightbox data-caption="Placeholder — replace with a wide photograph.">
-    <img src="assets/home/band.svg" alt="Placeholder for a wide landscape photograph" loading="lazy" decoding="async">
-  </a>
-  <figcaption class="wrap"><span class="cap">Placeholder &mdash; a wide photograph goes here.</span> <span class="credit">assets/home/band.jpg</span></figcaption>
+  <div class="band-row" data-gallery>
+    <a class="fig-frame" href="assets/home/band-1.svg" data-lightbox><img src="assets/home/band-1.svg" alt="Placeholder for a vertical photograph" loading="lazy" decoding="async"></a>
+    <a class="fig-frame" href="assets/home/band-2.svg" data-lightbox><img src="assets/home/band-2.svg" alt="Placeholder for a vertical photograph" loading="lazy" decoding="async"></a>
+    <a class="fig-frame" href="assets/home/band-3.svg" data-lightbox><img src="assets/home/band-3.svg" alt="Placeholder for a vertical photograph" loading="lazy" decoding="async"></a>
+  </div>
+  <figcaption class="wrap"><span class="cap">Placeholder &mdash; three vertical photographs go here.</span> <span class="credit">assets/home/band-1.jpg &middot; band-2.jpg &middot; band-3.jpg</span></figcaption>
 </figure>
 
 <!-- ============================================================
@@ -119,16 +122,17 @@
     </article>
 
     <article class="project">
-      <div class="project-media project-media--n3" data-gallery>
-        <a class="fig-frame" href="assets/home/projects/willbuilds-ai.svg" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai.svg" alt="Placeholder for a willbuilds.ai screenshot or photograph" loading="lazy" decoding="async"></a>
-        <a class="fig-frame" href="assets/home/projects/willbuilds-ai-2.svg" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai-2.svg" alt="Placeholder for a second willbuilds.ai image" loading="lazy" decoding="async"></a>
-        <a class="fig-frame" href="assets/home/projects/willbuilds-ai-3.svg" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai-3.svg" alt="Placeholder for a third willbuilds.ai image" loading="lazy" decoding="async"></a>
+      <div class="project-media" data-gallery>
+        <a class="fig-frame" href="assets/home/projects/willbuilds-ai.png" data-lightbox data-caption="willbuilds.ai"><img src="assets/home/projects/willbuilds-ai.png" alt="The willbuilds.ai homepage, styled like a terminal window, with a grid of featured projects" loading="lazy" decoding="async"></a>
       </div>
       <div class="project-text">
         <p class="kicker"><span class="project-num">02</span>AI / Automation</p>
         <h3 class="project-title">willbuilds.ai</h3>
         <p class="project-desc">Practical AI and automation tools built around real-world workflows, custom learning agents and mentoring tools that improve individualized student learning.</p>
-        <a class="read-link" href="https://www.willbuilds.ai" target="_blank" rel="noopener">willbuilds.ai <span aria-hidden="true">&rarr;</span></a>
+        <p class="project-links">
+          <a class="read-link" href="#willbuilds-title">Featured projects <span aria-hidden="true">&darr;</span></a>
+          <a class="read-link" href="https://willbuilds.ai/" target="_blank" rel="noopener">willbuilds.ai <span aria-hidden="true">&rarr;</span></a>
+        </p>
       </div>
     </article>
 
@@ -142,6 +146,81 @@
         <p class="project-desc">Independent filming for professional athletes and small businesses, focused on authentic storytelling and mountain bike culture.</p>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     WILLBUILDS.AI — featured software projects.
+     Screenshots: assets/home/willbuilds/ (16:10 crops best).
+     Copy an <article> to add a project; status is "wb-status--live"
+     or "wb-status--dev".
+     ============================================================ -->
+<section class="home-section home-wb" aria-labelledby="willbuilds-title">
+  <div class="wrap">
+    <div class="home-head">
+      <p class="eyebrow">Software</p>
+      <h2 class="fn-label home-head-title" id="willbuilds-title">willbuilds.ai</h2>
+      <p class="home-head-note">I build small tools that solve specific problems in my own life &mdash; then ship them so other people can use them too.</p>
+    </div>
+
+    <div class="fn-grid wb-grid">
+      <article class="card card--standard wb-card">
+        <div class="card-media wb-shot"><img src="assets/home/willbuilds/mathlete-mtb.png" alt="The Mathlete MTB site, showing the Mathlete Lab and its four labs of math tools" width="1600" height="1000" loading="lazy" decoding="async"></div>
+        <div class="card-text">
+          <p class="kicker">Mathlete</p>
+          <h3 class="card-title"><a class="card-link" href="https://willbuilds.ai/projects/mathlete-mtb/" target="_blank" rel="noopener">Mathlete MTB</a></h3>
+          <p class="card-excerpt">My tutoring business and its lab of mountain-bike math tools.</p>
+          <p class="wb-status wb-status--live"><span class="wb-dot" aria-hidden="true"></span>Live</p>
+        </div>
+      </article>
+      <article class="card card--standard wb-card">
+        <div class="card-media wb-shot"><img src="assets/home/willbuilds/gear-ratio-lab.png" alt="Gear Ratio Lab: choosing a math course and a race course with elevation profiles" width="1600" height="1000" loading="lazy" decoding="async"></div>
+        <div class="card-text">
+          <p class="kicker">Mathlete</p>
+          <h3 class="card-title"><a class="card-link" href="https://willbuilds.ai/projects/gear-ratio-lab/" target="_blank" rel="noopener">Gear Ratio Lab</a></h3>
+          <p class="card-excerpt">Pick the gears, work the ratios, race the rival.</p>
+          <p class="wb-status wb-status--live"><span class="wb-dot" aria-hidden="true"></span>Live</p>
+        </div>
+      </article>
+      <article class="card card--standard wb-card">
+        <div class="card-media wb-shot"><img src="assets/home/willbuilds/hvac-studio.png" alt="HVAC Studio floor plan with room areas and details for the primary bedroom" width="1600" height="1000" loading="lazy" decoding="async"></div>
+        <div class="card-text">
+          <p class="kicker">Work</p>
+          <h3 class="card-title"><a class="card-link" href="https://willbuilds.ai/projects/hvac-studio/" target="_blank" rel="noopener">HVAC Studio</a></h3>
+          <p class="card-excerpt">Residential HVAC design, from floor plan to proposal, in one model.</p>
+          <p class="wb-status wb-status--dev"><span class="wb-dot" aria-hidden="true"></span>In development</p>
+        </div>
+      </article>
+      <article class="card card--standard wb-card">
+        <div class="card-media wb-shot"><img src="assets/home/willbuilds/tend.png" alt="Tend on an iPhone, showing today’s habits and progress" width="1600" height="1000" loading="lazy" decoding="async"></div>
+        <div class="card-text">
+          <p class="kicker">Personal</p>
+          <h3 class="card-title"><a class="card-link" href="https://willbuilds.ai/projects/tend/" target="_blank" rel="noopener">Tend</a></h3>
+          <p class="card-excerpt">An iPhone app for habits, tasks and goals in one daily view.</p>
+          <p class="wb-status wb-status--dev"><span class="wb-dot" aria-hidden="true"></span>In development</p>
+        </div>
+      </article>
+      <article class="card card--standard wb-card">
+        <div class="card-media wb-shot"><img src="assets/home/willbuilds/the-notebook.png" alt="The Notebook: searchable notes on lined index cards, filtered by topic" width="1600" height="1000" loading="lazy" decoding="async"></div>
+        <div class="card-text">
+          <p class="kicker">Personal</p>
+          <h3 class="card-title"><a class="card-link" href="https://willbuilds.ai/projects/the-notebook/" target="_blank" rel="noopener">The Notebook</a></h3>
+          <p class="card-excerpt">A private library for the lessons and ideas I want to keep.</p>
+          <p class="wb-status wb-status--dev"><span class="wb-dot" aria-hidden="true"></span>In development</p>
+        </div>
+      </article>
+      <article class="card card--standard wb-card">
+        <div class="card-media wb-shot"><img src="assets/home/willbuilds/leverage-planner.png" alt="Leverage Planner’s Today view, ranking the three highest-leverage actions" width="1600" height="1000" loading="lazy" decoding="async"></div>
+        <div class="card-text">
+          <p class="kicker">Personal</p>
+          <h3 class="card-title"><a class="card-link" href="https://willbuilds.ai/projects/leverage-planner/" target="_blank" rel="noopener">Leverage Planner</a></h3>
+          <p class="card-excerpt">Ranks my tasks by leverage and fits the best into my real day.</p>
+          <p class="wb-status wb-status--dev"><span class="wb-dot" aria-hidden="true"></span>In development</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="wb-more"><a class="read-link" href="https://willbuilds.ai/projects/" target="_blank" rel="noopener">All projects on willbuilds.ai <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
 
