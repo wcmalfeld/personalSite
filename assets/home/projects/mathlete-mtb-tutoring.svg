@@ -16,6 +16,6 @@
 <polyline points="-20,1210 30,1206 80,1202 130,1198 180,1194 230,1190 280,1187 330,1184 380,1183 430,1182 480,1182 530,1184 580,1186 630,1189 680,1193 730,1197 780,1202 830,1207 880,1211 930,1214 980,1217 1030,1219 1080,1220 1130,1219 1180,1218" fill="none" stroke="#1F2B24" stroke-opacity="0.2" stroke-width="1.7142857142857142"/>
 <g font-family="ui-monospace, Menlo, monospace" fill="#1F2B24" text-anchor="middle">
 <text x="600" y="578" font-size="63.24999999999999" letter-spacing="11">PLACEHOLDER · 1:1</text>
-<text x="600" y="660.5" font-size="38.5" opacity="0.75">replace assets/home/projects/mathlete-mtb-3.jpg</text>
+<text x="600" y="660.5" font-size="38.5" opacity="0.75">replace assets/home/projects/mathlete-mtb-tutoring.jpg</text>
 </g>
 </svg>
